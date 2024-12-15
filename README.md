@@ -1,6 +1,19 @@
-# Start with vipchecker_python
-**To begin you must to configure script:**
-- **In config/settings.json you need configure your script (on or off headless). Headless allows hide web browser window if script is ON.**
-- **In config/cookies.json you need write ALL your cookies on the site vipchecker.ru. ALL COOKIES!!!**
+После установки всех программ вы можете настроить скрипт в папке config - settings.json
 
-**For work script you need upload .png file into directory, where located general.py. His name must be `test.png` with usernames in TAB (with a donate). After you need start script and script parsing password from vipchecker database. All result create into next folder: readyData/.**
+НАСТРОЙКИ:
+headless - отвечает за фоновый режим программы
+В чем важность headless? healdess отвечает за то, как будет работать браузер (в фоновом или не в фоновом режиме)
+
+
+Если значение True - значит скрипт будет работать в фоновом режиме
+Если значение False - значит скрипт будет работать в открытом окне (его можно свернуть)
+
+
+В папке config и в файле cookies вы должны ввести свои куки, которые обновляются каждый день начиная с 00:00 по МСК
+В файле tesseract.json вы должны указать путь до tesseract.exe, который вы установили
+
+Для работы скрипты достаточно закинуть файл скриншота с названием test и формата .png (test.png)
+После запускаете файл general и ждете окончания.
+В папке readyData появится 2 файла - deluxe.txt и data.txt
+Если вы имеете подписку DELUXE, то пароли который были найдены с помощью логов DELUXE будут записаны в этот файл.
+В файле data.txt будут записаны все ники с паролями в формате НИК ПАРОЛЬ ПАРОЛЬ ПАРОЛЬ ..
